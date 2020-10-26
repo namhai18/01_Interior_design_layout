@@ -1,0 +1,113 @@
+/* GLOBAL CSS */
+/* Dùng cho padding,ý nghĩa đừng cộng dồn padding riêng : nội dung + padding + border */
+*{
+    box-sizing: border-box;
+}
+/* Dùng xong float cần clear đi */
+.clear{
+    clear:both;
+}
+/* HEADER */
+/* define css trong img nằm trong header */
+.header img{
+    width:110px;
+}
+/* define css cho ul nằm trong header */
+.header ul{
+    list-style: none;
+    background-color : black;
+    padding: 10px 0px;
+}
+/* Cùng 1 hàng cho li */
+.header ul li{
+    display:inline;
+    margin: 10px;
+}
+.header ul li a {
+    font-size: 20px;
+    color:white;
+    text-decoration: none;
+}
+/* margin: khoảng cách thẻ hiện hành và thẻ bên cạnh , 
+padding: khoảng cách viền và nội dung chữ*/
+/* margin-top , margin-left , margin-right */
+/* margin : 20px , t,r,b,l */
+/* margin : 10px,20px  (t,b) (r,l) */
+.carousel{
+    background-image: url('../img/slider_1.jpg');
+    height: 500px;
+    /* Không tự repeat hình  */
+    background-repeat : no-repeat;
+    background-size: cover;
+    background-position: center; 
+}
+/* Canh chỉnh cùng dòng cho khối div dùng float -> dùng xong phải clear đi*/
+.best-saler__items{
+    float:right;
+    width: 25%;
+    /* margin : 0 10px; */
+    padding: 10px 10px;
+}
+/* Hình ảnh 100% của thẻ cha  */
+.best-saler__items img{
+    width : 100%;
+}
+.best-saler__content button{
+    background-color: orange;
+    border : 1px solid orange;
+    color : white;
+    padding : 5px 5px;
+    /* Tạo độ cong cho nút */
+    border-radius: 10px;
+    /* Hiện bàn tay khi rê vào button */
+    cursor: pointer;
+}
+/* Thêm sự kiện khi người dùng rê chuột */
+.best-saler__content button:hover{
+    background-color: palegreen;
+    color: black;
+}
+.banner {
+    background-image : url('../img/nature.jpg');
+    height: 300px;
+    background-size: cover;
+    background-repeat : no-repeat;
+    background-position : center;
+    /* Khai báo cha */
+    position: relative;
+}
+.banner .banner__circle{
+    /* Khai báo con */
+    position : absolute;
+    top : 20px;
+    left: 200px;
+    /* //////////////////////// */
+    font-size : 15px;
+    width: 150px;
+    height: 150px;
+    /* background-color : red; */
+    border-radius: 20%;
+    /* 0->1 tùy theo độ trong suốt */
+    /* opacity : 0.6; */
+    background-color: rgba(218, 81, 76, 0.4);
+    text-align: center;
+}
+/* Intro */
+/* Thuộc tính giống nhau để cùng hàng cách nhau , */
+.intro_left,.intro_right,.intro_img1 {
+    float : left;
+    width: 50%;
+}
+
+.intro_items img {
+    /* Fill full img vào thẻ div */
+    width: 100%;
+    /* Đổi tính chất từ inline -> block => làm mất line nhỏ dưới */
+    display : block;
+}
+/* Thêm padding thêm ngay div cha của img -> để tăng vỏ bao của img*/
+.intro_items {
+    padding : 0px 10px 20px;
+    /* padding : top left,right bottom */
+}
+
